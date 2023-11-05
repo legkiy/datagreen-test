@@ -75,10 +75,10 @@ const ChartContainer = () => {
     ApiFetch.getBtcRate(periodRef.current)
       .then((res) => {
         setBtcData(res.data.history.reverse());
+        setError(false);
         if (ethData.length > 0) {
           getEthValue();
         }
-        setError(false);
       })
       .catch((err) => {
         console.log(err);

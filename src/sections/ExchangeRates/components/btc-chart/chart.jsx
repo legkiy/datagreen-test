@@ -1,3 +1,4 @@
+import { memo } from 'react';
 import PropTypes from 'prop-types';
 import ReactApexChart from 'react-apexcharts';
 
@@ -54,4 +55,4 @@ BtcChart.propTypes = {
   ethData: PropTypes.array,
 };
 
-export default BtcChart;
+export default memo(BtcChart);
